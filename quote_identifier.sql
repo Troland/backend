@@ -1,0 +1,3 @@
+CREATE FUNCTION quote_identifier(id TEXT)
+RETURNS TEXT DETERMINISTIC
+RETURN CONCAT('`',REPLACE(id,'`','``'),'`');
